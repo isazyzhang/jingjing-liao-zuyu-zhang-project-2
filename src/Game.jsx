@@ -19,13 +19,13 @@ export default function Game() {
 
   return (
     <div>
+      <ResetButton text="Reset The Game" />
       <div class="count">
         Score: {turn === 0 ? humanClickCount : computerClickCount}
       </div>
       <div class="count">{turn === 0 ? "Human's Turn" : "Computer's Turn"}</div>
       <div class="winner">{winner} </div>
       {turn === 0 ? <ComputerBoard /> : <HumanBoard />}
-      <ResetButton text="Reset The Game" />
     </div>
   );
 }

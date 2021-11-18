@@ -13,10 +13,10 @@ export default function Board() {
 
   return (
     <div>
+      <ResetButton text="Reset The Game" />
       <div class="count">Score: {humanClickCount}</div>
       <div class="winner">{winner} </div>
       {<ComputerBoard />}
-      <ResetButton text="Reset The Game" />
     </div>
   );
 }

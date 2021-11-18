@@ -4,6 +4,7 @@
   grid-template-rows: repeat(10, 100px);
   align-items: center;
   justify-content: center;
+  margin-bottom: 50px;
 }
 
 .count,
@@ -12,7 +13,7 @@
   margin-top: 10px;
   text-align: center;
   font-weight: 700;
-  margin-bottom: 50px;
+  margin-bottom: 10px;
 }
 
 .computerCount {
