@@ -9,11 +9,11 @@ export default function Game() {
   const computerClickCount = useSelector((state) => state.humanBoard.count);
   const turn = useSelector((state) => state.turn);
 
-  const totalShips = 5;
+  const totalShipsSquares = 17;
   let winner = "";
-  if (humanClickCount === totalShips) {
+  if (humanClickCount === totalShipsSquares) {
     winner = "Game Over! You Won!";
-  } else if (computerClickCount === totalShips) {
+  } else if (computerClickCount === totalShipsSquares) {
     winner = "Game Over! Computer Won!";
   }
 

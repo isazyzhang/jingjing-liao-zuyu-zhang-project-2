@@ -5,9 +5,9 @@ import ComputerBoard from "./ComputerBoard";
 
 export default function Board() {
   const humanClickCount = useSelector((state) => state.computerBoard.count);
-  const totalShips = 5;
+  const totalShipsSquares = 17;
   let winner = "";
-  if (humanClickCount === totalShips) {
+  if (humanClickCount === totalShipsSquares) {
     winner = "Game Over! You Won!";
   }
 
