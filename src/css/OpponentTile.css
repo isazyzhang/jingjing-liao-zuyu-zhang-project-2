@@ -1,21 +1,21 @@
 .a {
-    background-color: lightgreen;
-    color: green;
+  background-color: lightgreen;
+  color: green;
 }
 
 #opponentTile {
-    border: 1px solid darkgrey;
+  border: 1px solid darkgrey;
 }
 
 .n {
-    background-color: lightblue;
+  background-color: lightblue;
 }
 
-.s {
+/* .s {
     background-color: black;
-}
+} */
 
 .X {
-    background-color: lightcoral;
-    color: red;
+  background-color: lightcoral;
+  color: red;
 }

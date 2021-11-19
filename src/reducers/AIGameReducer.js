@@ -27,7 +27,7 @@ export default function AIGameReducer(state, action) {
   switch (action.type) {
     case "HumanClickSquare": {
       const value = state.board[action.x][action.y];
-      if (value === " ") {
+      if (value === "s") {
         state.board[action.x][action.y] = "X";
         state.count++;
       } else if (value === "") {

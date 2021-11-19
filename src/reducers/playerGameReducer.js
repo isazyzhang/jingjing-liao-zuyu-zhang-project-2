@@ -1,44 +1,7 @@
 import { cloneDeep } from "lodash";
 import { randomlyChooseFiveShips } from "./reducerUtils";
 
-// const defaultState = {
-//     board:  [
-//                 ["n", "n", "n", "n", "n", "n", "n", "n", "n", "n"],
-//                 ["n", "n", "n", "n", "n", "n", "n", "n", "n", "n"],
-//                 ["n", "n", "n", "n", "n", "n", "n", "n", "n", "n"],
-//                 ["n", "n", "n", "n", "n", "n", "n", "n", "n", "n"],
-//                 ["n", "n", "n", "n", "n", "n", "n", "n", "n", "n"],
-//                 ["n", "n", "n", "n", "n", "n", "n", "n", "n", "n"],
-//                 ["n", "n", "n", "n", "n", "n", "n", "n", "n", "n"],
-//                 ["n", "n", "n", "n", "n", "n", "n", "n", "n", "n"],
-//                 ["n", "n", "n", "n", "n", "n", "n", "n", "n", "n"],
-//                 ["n", "n", "n", "n", "n", "n", "n", "n", "n", "n"]
-//             ],
-//     AIScore: 0
-// }
-
-// const initialBoard = [
-//     ["n", "n", "n", "n", "n", "n", "n", "n", "n", "n"],
-//     ["n", "n", "n", "n", "n", "n", "n", "n", "n", "n"],
-//     ["n", "n", "n", "n", "n", "n", "n", "n", "n", "n"],
-//     ["n", "n", "n", "n", "n", "n", "n", "n", "n", "n"],
-//     ["n", "n", "n", "n", "n", "n", "n", "n", "n", "n"],
-//     ["n", "n", "n", "n", "n", "n", "n", "n", "n", "n"],
-//     ["n", "n", "n", "n", "n", "n", "n", "n", "n", "n"],
-//     ["n", "n", "n", "n", "n", "n", "n", "n", "n", "n"],
-//     ["n", "n", "n", "n", "n", "n", "n", "n", "n", "n"],
-//     ["n", "n", "n", "n", "n", "n", "n", "n", "n", "n"]
-// ];
-
-// const initialState = {
-//     count: 0,
-//     board: randomlyChooseFiveShips(initialBoard)
-// };
-
 export default function playerGameReducer(state, action) {
-  // if (isGameBoardEmpty()) {
-  //     generateGameBoard();
-  // }
   const initialBoard = [
     ["", "", "", "", "", "", "", "", "", ""],
     ["", "", "", "", "", "", "", "", "", ""],
