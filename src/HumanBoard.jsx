@@ -24,7 +24,7 @@ export default function HumanBoard() {
 
   for (let i = 0; i < humanBoardState.length; i++) {
     for (let j = 0; j < humanBoardState[i].length; j++) {
-      if (humanBoardState[i][j] === "" || humanBoardState[i][j] === "Ship") {
+      if (humanBoardState[i][j] === "" || humanBoardState[i][j] === " ") {
         availablePos.push([i, j]);
       }
     }

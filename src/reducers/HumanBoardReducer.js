@@ -27,7 +27,7 @@ export default function humanBoardReducer(state, action) {
   switch (action.type) {
     case "ComputerClickSquare": {
       const value = state.board[action.x][action.y];
-      if (value === "Ship") {
+      if (value === " ") {
         state.board[action.x][action.y] = "X";
         state.count++;
       } else if (value === "") {

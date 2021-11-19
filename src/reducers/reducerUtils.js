@@ -31,7 +31,7 @@ function placeShips(board, shipLength) {
       if (getShipOnBoard(board, rowPos, colPos, dir, shipLength)) {
         placeShipsSuccessfully = true;
         for (let i = 0; i < shipLength; i++) {
-          board[rowPos][colPos] = "Ship";
+          board[rowPos][colPos] = " ";
           colPos -= 1;
         }
       }
@@ -40,7 +40,7 @@ function placeShips(board, shipLength) {
       if (getShipOnBoard(board, rowPos, colPos, dir, shipLength)) {
         placeShipsSuccessfully = true;
         for (let i = 0; i < shipLength; i++) {
-          board[rowPos][colPos] = "Ship";
+          board[rowPos][colPos] = " ";
           colPos += 1;
         }
       }
@@ -49,7 +49,7 @@ function placeShips(board, shipLength) {
       if (getShipOnBoard(board, rowPos, colPos, dir, shipLength)) {
         placeShipsSuccessfully = true;
         for (let i = 0; i < shipLength; i++) {
-          board[rowPos][colPos] = "Ship";
+          board[rowPos][colPos] = " ";
           rowPos -= 1;
         }
       }
@@ -58,13 +58,12 @@ function placeShips(board, shipLength) {
       if (getShipOnBoard(board, rowPos, colPos, dir, shipLength)) {
         placeShipsSuccessfully = true;
         for (let i = 0; i < shipLength; i++) {
-          board[rowPos][colPos] = "Ship";
+          board[rowPos][colPos] = " ";
           rowPos += 1;
         }
       }
     }
   }
-  return cloneDeep(board);
 }
 
 function validPositionInBoard(board) {
