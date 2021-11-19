@@ -8,6 +8,7 @@ import reducers from "./reducers/reducers";
 import { Provider } from "react-redux";
 import FreePlayBoard from "./FreePlayBoard";
 import { createStore } from "redux";
+import GameRule from "./GameRule";
 
 const store = createStore(reducers);
 
@@ -18,6 +19,7 @@ ReactDOM.render(
         <Route path="/" element={<LandingPage />}></Route>
         <Route path="/standardGameBoard" element={<Game />}></Route>
         <Route path="/freePlayGameBoard" element={<FreePlayBoard />}></Route>
+        <Route path="/GameRule" element={<GameRule />}></Route>
       </Routes>
     </Router>
   </Provider>,

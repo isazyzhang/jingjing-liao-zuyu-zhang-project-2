@@ -6,16 +6,15 @@
   color: blue;
 }
 
-.standardGame {
-  float: left;
+.standardGame,
+.freePlayGameBoard,
+.GameRule {
   font-size: 50px;
-  margin-left: 400px;
   color: cornflowerblue;
+  margin-right: 20px;
 }
 
-.freePlayGameBoard {
-  font-size: 50px;
-  float: right;
-  margin-right: 400px;
-  color: cornflowerblue;
+.links {
+  display: flex;
+  justify-content: center;
 }
