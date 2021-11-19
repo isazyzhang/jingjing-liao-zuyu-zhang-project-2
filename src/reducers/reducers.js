@@ -1,10 +1,10 @@
 import { combineReducers } from "redux";
-import humanBoardReducer from "./HumanBoardReducer";
-import computerBoardReducer from "./ComputerBoardReducer";
+import playerGameReducer from "./playerGameReducer";
+import AIGameReducer from "./AIGameReducer";
 import turnReducer from "./turnReducer";
 
 export default combineReducers({
-  humanBoard: humanBoardReducer,
-  computerBoard: computerBoardReducer,
-  turn: turnReducer,
+    playerGame: playerGameReducer,
+    AIGame: AIGameReducer,
+    turn: turnReducer
 });

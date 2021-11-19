@@ -1,27 +1,29 @@
-import React from "react";
-import ReactDOM from "react-dom";
-import "./index.css";
-import Game from "./Game";
-import LandingPage from "./LandingPage";
-import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
-import reducers from "./reducers/reducers";
-import { Provider } from "react-redux";
-import FreePlayBoard from "./FreePlayBoard";
-import { createStore } from "redux";
-import GameRule from "./GameRule";
+import React from 'react';
+import ReactDOM from 'react-dom';
+import './index.css';
+import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+import {createStore} from 'redux';
+import {Provider} from 'react-redux';
+import WelcomePage from './WelcomePage';
+import StartGame from './StartGame';
+import NormalGame from './NormalGame';
+import FreePlay from './FreePlay';
+import reducers from './reducers/reducers';
 
 const store = createStore(reducers);
 
 ReactDOM.render(
   <Provider store={store}>
+    <h2></h2>
     <Router>
-      <Routes>
-        <Route path="/" element={<LandingPage />}></Route>
-        <Route path="/standardGameBoard" element={<Game />}></Route>
-        <Route path="/freePlayGameBoard" element={<FreePlayBoard />}></Route>
-        <Route path="/GameRule" element={<GameRule />}></Route>
-      </Routes>
+    <Link to={"/"}>Home</Link>
+        <Routes>
+          <Route path="/" element={<WelcomePage />}></Route>
+          <Route path="/startGame" element={<StartGame /> }></Route>
+          <Route path="/normalGame" element={<NormalGame />}></Route>
+          <Route path="/freeplay" element={<FreePlay />}></Route>
+        </Routes>
     </Router>
   </Provider>,
-  document.getElementById("root")
+  document.getElementById('root')
 );

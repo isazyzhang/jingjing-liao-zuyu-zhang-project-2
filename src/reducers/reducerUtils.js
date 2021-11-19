@@ -1,6 +1,5 @@
 import { cloneDeep } from "lodash";
 
-// Randomly choose five ships in the board, ship position will mark as " "
 let ships = [5, 4, 3, 3, 2];
 let direction = ["left", "up", "right", "down"];
 
@@ -16,22 +15,20 @@ function placeShips(board, shipLength) {
   for (let i = 0; i < board.length; i++) {
     newArray.push(i);
   }
-
+  debugger;
   let availablePosInBoard = validPositionInBoard(board);
   let randomPos =
     availablePosInBoard[Math.floor(Math.random() * availablePosInBoard.length)];
   let rowPos = randomPos[0];
   let colPos = randomPos[1];
-
   let placeShipsSuccessfully = false;
-
   while (placeShipsSuccessfully === false) {
     let dir = direction[Math.floor(Math.random() * direction.length)];
     if (dir === "left") {
       if (getShipOnBoard(board, rowPos, colPos, dir, shipLength)) {
         placeShipsSuccessfully = true;
         for (let i = 0; i < shipLength; i++) {
-          board[rowPos][colPos] = " ";
+          board[rowPos][colPos] = "s";
           colPos -= 1;
         }
       }
@@ -40,7 +37,7 @@ function placeShips(board, shipLength) {
       if (getShipOnBoard(board, rowPos, colPos, dir, shipLength)) {
         placeShipsSuccessfully = true;
         for (let i = 0; i < shipLength; i++) {
-          board[rowPos][colPos] = " ";
+          board[rowPos][colPos] = "s";
           colPos += 1;
         }
       }
@@ -49,7 +46,7 @@ function placeShips(board, shipLength) {
       if (getShipOnBoard(board, rowPos, colPos, dir, shipLength)) {
         placeShipsSuccessfully = true;
         for (let i = 0; i < shipLength; i++) {
-          board[rowPos][colPos] = " ";
+          board[rowPos][colPos] = "s";
           rowPos -= 1;
         }
       }
@@ -58,7 +55,7 @@ function placeShips(board, shipLength) {
       if (getShipOnBoard(board, rowPos, colPos, dir, shipLength)) {
         placeShipsSuccessfully = true;
         for (let i = 0; i < shipLength; i++) {
-          board[rowPos][colPos] = " ";
+          board[rowPos][colPos] = "s";
           rowPos += 1;
         }
       }

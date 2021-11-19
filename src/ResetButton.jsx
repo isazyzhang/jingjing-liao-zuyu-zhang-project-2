@@ -1,6 +1,6 @@
 import React from "react";
 import { useDispatch } from "react-redux";
-import "./ResetButton.css";
+import "./css/ResetButton.css";
 
 export default function ResetButton(props) {
   const { text } = props;
