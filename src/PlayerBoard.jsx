@@ -8,12 +8,7 @@ import { useSelector, useDispatch } from "react-redux";
 export default function PlayerBoard() {
   const playerBoardState = useSelector((state) => state.playerGame.board);
   const turnState = useSelector((state) => state.turn);
-<<<<<<< HEAD
   
-=======
-  // const AIScore = useSelector((state) => state.playerGame.AIScore);
-
->>>>>>> df795d8f98a6355c5e784d028e3d0e09516f184b
   const boardComponent = [];
   for (let i = 0; i < playerBoardState.length; i++) {
     let row = playerBoardState[i];
@@ -28,11 +23,7 @@ export default function PlayerBoard() {
   let availablePos = [];
   for (let i = 0; i < playerBoardState.length; i++) {
     for (let j = 0; j < playerBoardState[i].length; j++) {
-<<<<<<< HEAD
       if (playerBoardState[i][j] === "n" || playerBoardState[i][j] === "⚫") {
-=======
-      if (playerBoardState[i][j] === "" || playerBoardState[i][j] === "s") {
->>>>>>> df795d8f98a6355c5e784d028e3d0e09516f184b
         availablePos.push([i, j]);
       }
     }
@@ -49,27 +40,6 @@ export default function PlayerBoard() {
     });
     dispatch({ type: "ComputerChangeTurn" });
   }
-<<<<<<< HEAD
-=======
-
-  // setTimeout(() => {
-  //     if (computerClickOnce) {
-  //       computerClickOnce = false;
-  //       return;
-  //     }
-  //     let pos = availablePos[Math.floor(Math.random() * availablePos.length)];
-  //     dispatch({
-  //       type: "ComputerClickSquare",
-  //       x: pos[0],
-  //       y: pos[1],
-  //     });
-  //     computerClickOnce = true;
-  //   }, 2000);
-
-  //   setTimeout(() => {
-  //     dispatch({ type: "ComputerChangeTurn" });
-  //   }, 4000);
->>>>>>> df795d8f98a6355c5e784d028e3d0e09516f184b
 
   return (
     <div>
