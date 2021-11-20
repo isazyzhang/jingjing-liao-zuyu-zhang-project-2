@@ -10,8 +10,7 @@ let computerClickOnce = false;
 
 export default function PlayerBoard() {
   const playerBoardState = useSelector((state) => state.playerGame.board);
-  // const AIScore = useSelector((state) => state.playerGame.AIScore);
-
+  
   const boardComponent = [];
   for (let i = 0; i < playerBoardState.length; i++) {
     let row = playerBoardState[i];
@@ -26,13 +25,13 @@ export default function PlayerBoard() {
   let availablePos = [];
   for (let i = 0; i < playerBoardState.length; i++) {
     for (let j = 0; j < playerBoardState[i].length; j++) {
-      if (playerBoardState[i][j] === "n" || playerBoardState[i][j] === "s") {
+      if (playerBoardState[i][j] === "" || playerBoardState[i][j] === "s") {
         availablePos.push([i, j]);
       }
     }
   }
 
-  const dispatch = useDispatch();
+  // const dispatch = useDispatch();
 
   // setTimeout(() => {
   //     if (computerClickOnce) {

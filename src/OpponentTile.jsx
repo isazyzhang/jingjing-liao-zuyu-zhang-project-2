@@ -3,7 +3,7 @@ import React from 'react';
 import { useDispatch } from 'react-redux';
 
 export default function OpponentTile(props) {
-    const condition = props.condition; // n or s or a
+    const condition = props.condition;
     const dispatch = useDispatch();
     return (
         <div onClick={() => {
@@ -14,12 +14,12 @@ export default function OpponentTile(props) {
                     y:props.y
                 }
             );
-            setTimeout(() => {
-                dispatch({
-                    type: "HumanChangeTurn",
-                });
-            }, 2000);
-        }}id="opponentTile" class={condition}>
+            // setTimeout(() => {
+            //     dispatch({
+            //         type: "HumanChangeTurn",
+            //     });
+            // }, 2000);
+        }}class="opponentTile" id={condition}>
             {condition}
         </div>
     )

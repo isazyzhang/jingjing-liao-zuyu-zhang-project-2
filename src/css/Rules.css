@@ -1,0 +1,33 @@
+#all-rules {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#title{
+    margin: 0 auto;
+    font-size: 30px;
+    font-family: "Roboto", sans-serif;
+    color: darkmagenta;
+    font-style: bolder;
+}
+
+#intro, #details, #details2, #normal-version, #freeplay-version{
+    font-size: 18px;
+    font-family: "Roboto", sans-serif;
+    width: 50%;
+    height: 50%;
+    margin: 0 auto;
+    color: darkolivegreen;
+}
+
+#normal-version {
+    background-color: yellowgreen;
+    color: darkmagenta
+}
+
+#freeplay-version {
+    background-color: yellowgreen;
+    color: darkmagenta
+}

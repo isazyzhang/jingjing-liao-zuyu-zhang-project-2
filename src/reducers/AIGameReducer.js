@@ -1,5 +1,5 @@
 import { cloneDeep } from "lodash";
-import { randomlyChooseFiveShips } from "./reducerUtils";
+import { randomlyChooseFiveShipsForAI } from "./AIreducerUtils";
 
 export default function AIGameReducer(state, action) {
   const initialBoard = [
@@ -17,7 +17,7 @@ export default function AIGameReducer(state, action) {
 
   const initialState = {
     count: 0,
-    board: randomlyChooseFiveShips(initialBoard),
+    board: randomlyChooseFiveShipsForAI(initialBoard),
   };
 
   if (state === undefined) {
@@ -32,11 +32,11 @@ export default function AIGameReducer(state, action) {
         state.count++;
       } else if (value === "") {
         const copy = cloneDeep(state.board);
-        copy[action.x][action.y] = "⚫";
+        copy[action.x][action.y] = "✓";
         state.board = copy;
         // Avoid human click the occupied position more than once, give an alert
-      } else if (value === "X" || value === "⚫") {
-        alert("Do not click again!");
+      } else if (value === "X" || value === "✓") {
+        alert("Do not click again!"); 
       }
       return { ...state };
     }

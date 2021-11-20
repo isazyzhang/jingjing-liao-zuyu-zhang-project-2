@@ -8,11 +8,12 @@
   margin-top: 250px;
 }
 
-.count,
-.winner {
-  font-size: 30px;
+.count, .winner {
+  font-family: "Roboto", sans-serif;
+  color: darkgrey;
+  font-size: 25px;
   margin-top: 20px;
   text-align: center;
-  font-weight: 500;
+  font-weight: bolder;
   margin-bottom: 10px;
 }

@@ -1,21 +1,16 @@
-#playerTile {
+.playerTile {
   border: 1px solid darkgrey;
-}
-
-.n {
   background-color: lightblue;
 }
 
-.a {
-  background-color: lightgreen;
-  color: green;
+#⚫ {
+  color: black;
+  text-align: center;
+  padding: 20%;
+  font-size: 20px;
 }
 
-/* .s {
-    background-color: black;
-} */
-
-.X {
+#X {
   background-color: lightcoral;
   color: red;
 }

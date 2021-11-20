@@ -1,11 +1,10 @@
 import React from "react";
-import { useParams } from "react-router";
-import { Link } from "react-router-dom";
 import PlayerBoard from "./PlayerBoard";
 import "./css/Boards.css";
 import OpponentBoard from "./OpponentBoard";
 import { useSelector} from 'react-redux';
 import ResetButton from "./ResetButton";
+import "./css/NormalGame.css";
 
 
 export default function NormalGame() {
@@ -24,76 +23,40 @@ export default function NormalGame() {
 
     return (
         <div>
-        <ResetButton text="Reset The Game" />
-            <div class="count">
-                Score: {turn === 0 ? humanClickCount : computerClickCount}
+            <div id="navbar">
+                <button id="desktop" class="mode">
+                Desktop Mode
+                </button>
+                <button onClick={() => {
+                    
+                }}
+                id="mobile" class="mode">
+                    Mobile Mode
+                </button>
             </div>
-            <div class="count">{turn === 0 ? "Human's Turn" : "Computer's Turn"}</div>
+        <ResetButton text="Reset The Game" />
+            {/* <div class="count">
+                Score: {turn === 0 ? humanClickCount : computerClickCount}
+            </div> */}
+            {/* <div class="count">{turn === 0 ? "Human's Turn" : "Computer's Turn"}</div> */}
             <div class="winner">{winner} </div>
-            <div id="boards">
-        <div id="opponent">
-            <h1>Opponent Board</h1>
-              <div>
-                <OpponentBoard />
-              </div>
-        </div>
+        <div id="boards">
+            <div id="opponent">
+                <h1 class="titles">Opponent Board</h1>
+                <div>
+                    <OpponentBoard />
+                </div>
+            </div>
 
-        <div id="own">
-            <h1>Your Board</h1>
-              <div>
-                <PlayerBoard />
-              </div>
+            <div id="own">
+                <h1 class="titles">Your Board</h1>
+                <div>
+                    <PlayerBoard />
+                </div>
+            </div>
+
         </div>
-      </div>
             {/* {turn === 0 ? <ComputerBoard /> : <HumanBoard />} */}
         </div>
     );
-
-    // return (
-    //     <div>
-    //       <div>
-    //         <ResetButton text="Reset The Game" />
-    //       </div>
-    //       <div class="count">
-    //         Score: {turn === 0 ? humanClickCount : computerClickCount}
-    //       </div>
-    //       <div id="boards">
-    //         <div id="opponent">
-    //             <h1>Opponent Board</h1>
-    //               <div>
-    //                 <ComputerBoard />
-    //               </div>
-    //         </div>
-    
-    //         <div id="own">
-    //             <h1>Your Board</h1>
-    //               <div>
-    //                 <HumanBoard />
-    //               </div>
-    //         </div>
-    //       </div>
-    //       </div>
-    //   )
-
-
-    // return (
-    //     <div>
-    //         <div id="boards">
-    //             <div id="opponent" turn={turn}>
-    //                 <h1>Opponent Board</h1>
-    //                 <div>
-    //                     <OpponentBoard />
-    //                 </div>
-    //             </div>
-    //             <div id="own" turn={turn}>
-    //                 <h1>
-    //                     Your Board
-    //                 </h1>
-    //                 <div>
-    //                     <PlayerBoard />
-    //                 </div>
-    //             </div>
-    //         </div>
-    //     </div>
-    // )
 }
