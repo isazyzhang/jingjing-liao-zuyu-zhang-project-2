@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 #navbar {
     display: flex;
     flex-direction: row;
@@ -19,3 +20,12 @@
     display: flex;
     flex-direction: column;
 }
+=======
+.winner {
+  font-size: 30px;
+  margin-top: 20px;
+  text-align: center;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+>>>>>>> df795d8f98a6355c5e784d028e3d0e09516f184b
