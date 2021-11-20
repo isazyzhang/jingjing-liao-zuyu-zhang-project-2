@@ -3,16 +3,16 @@ import { randomlyChooseFiveShipsForAI } from "./AIreducerUtils";
 
 export default function AIGameReducer(state, action) {
   const initialBoard = [
-    ["", "", "", "", "", "", "", "", "", ""],
-    ["", "", "", "", "", "", "", "", "", ""],
-    ["", "", "", "", "", "", "", "", "", ""],
-    ["", "", "", "", "", "", "", "", "", ""],
-    ["", "", "", "", "", "", "", "", "", ""],
-    ["", "", "", "", "", "", "", "", "", ""],
-    ["", "", "", "", "", "", "", "", "", ""],
-    ["", "", "", "", "", "", "", "", "", ""],
-    ["", "", "", "", "", "", "", "", "", ""],
-    ["", "", "", "", "", "", "", "", "", ""],
+    ["n", "n", "n", "n", "n", "n", "n", "n", "n", "n"],
+    ["n", "n", "n", "n", "n", "n", "n", "n", "n", "n"],
+    ["n", "n", "n", "n", "n", "n", "n", "n", "n", "n"],
+    ["n", "n", "n", "n", "n", "n", "n", "n", "n", "n"],
+    ["n", "n", "n", "n", "n", "n", "n", "n", "n", "n"],
+    ["n", "n", "n", "n", "n", "n", "n", "n", "n", "n"],
+    ["n", "n", "n", "n", "n", "n", "n", "n", "n", "n"],
+    ["n", "n", "n", "n", "n", "n", "n", "n", "n", "n"],
+    ["n", "n", "n", "n", "n", "n", "n", "n", "n", "n"],
+    ["n", "n", "n", "n", "n", "n", "n", "n", "n", "n"]
   ];
 
   const initialState = {
@@ -30,7 +30,7 @@ export default function AIGameReducer(state, action) {
       if (value === "s") {
         state.board[action.x][action.y] = "X";
         state.count++;
-      } else if (value === "") {
+      } else if (value === "n") {
         const copy = cloneDeep(state.board);
         copy[action.x][action.y] = "✓";
         state.board = copy;

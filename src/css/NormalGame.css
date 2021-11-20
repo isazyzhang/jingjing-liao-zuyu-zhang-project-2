@@ -6,3 +6,16 @@
 .mode {
     background-color: yellowgreen;
 }
+
+.winner {
+    font-size: 30px;
+    margin-top: 20px;
+    text-align: center;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+#mobileBoard {
+    display: flex;
+    flex-direction: column;
+}

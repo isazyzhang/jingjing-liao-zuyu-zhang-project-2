@@ -5,13 +5,14 @@ import OpponentBoard from "./OpponentBoard";
 import { useSelector} from 'react-redux';
 import ResetButton from "./ResetButton";
 import "./css/NormalGame.css";
+import { useState } from "react";
 
 
 export default function NormalGame() {
 
     const humanClickCount = useSelector((state) => state.AIGame.count);
     const computerClickCount = useSelector((state) => state.playerGame.count);
-    const turn = useSelector((state) => state.turn);
+    const [modeState, setModeState] = useState(0);
 
     const totalScore = 17;
     let winner = "";
@@ -24,23 +25,20 @@ export default function NormalGame() {
     return (
         <div>
             <div id="navbar">
-                <button id="desktop" class="mode">
-                Desktop Mode
+                <button onClick={() => {
+                    setModeState(0);
+                }}id="desktop" class="mode">
+                    Desktop Mode
                 </button>
                 <button onClick={() => {
-                    
-                }}
-                id="mobile" class="mode">
+                    setModeState(1);
+                }}id="mobile" class="mode">
                     Mobile Mode
                 </button>
             </div>
         <ResetButton text="Reset The Game" />
-            {/* <div class="count">
-                Score: {turn === 0 ? humanClickCount : computerClickCount}
-            </div> */}
-            {/* <div class="count">{turn === 0 ? "Human's Turn" : "Computer's Turn"}</div> */}
-            <div class="winner">{winner} </div>
-        <div id="boards">
+        <div class="winner">{winner} </div>
+        <div id={modeState === 0 ? "boards" : "mobileBoard"}>
             <div id="opponent">
                 <h1 class="titles">Opponent Board</h1>
                 <div>
@@ -54,9 +52,7 @@ export default function NormalGame() {
                     <PlayerBoard />
                 </div>
             </div>
-
         </div>
-            {/* {turn === 0 ? <ComputerBoard /> : <HumanBoard />} */}
         </div>
     );
 }

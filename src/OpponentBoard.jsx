@@ -8,7 +8,6 @@ import { useSelector} from 'react-redux';
 export default function OpponentBoard() {
 
     const AIBoardState = useSelector((state) => state.AIGame.board);
-    // const playerScore = useSelector((state) => state.AIGame.playerScore);
     
     const boardComponent = [];
     for (let i = 0; i < AIBoardState.length; i++) {
@@ -22,9 +21,6 @@ export default function OpponentBoard() {
     }
     return (
         <div>
-            {/* <div>
-                Your Score: {playerScore}
-            </div> */}
             <div id="board">
                 {boardComponent}
             </div>

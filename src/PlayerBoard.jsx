@@ -5,11 +5,10 @@ import "./css/PlayerBoard.css";
 import { useSelector } from "react-redux";
 import { useDispatch } from "react-redux";
 
-// This is the hack to skip a duplicate dispatch because triggered humanBoardState change.
-let computerClickOnce = false;
 
 export default function PlayerBoard() {
   const playerBoardState = useSelector((state) => state.playerGame.board);
+  const turnState = useSelector((state) => state.turn);
   
   const boardComponent = [];
   for (let i = 0; i < playerBoardState.length; i++) {
@@ -25,37 +24,26 @@ export default function PlayerBoard() {
   let availablePos = [];
   for (let i = 0; i < playerBoardState.length; i++) {
     for (let j = 0; j < playerBoardState[i].length; j++) {
-      if (playerBoardState[i][j] === "" || playerBoardState[i][j] === "s") {
+      if (playerBoardState[i][j] === "n" || playerBoardState[i][j] === "⚫") {
         availablePos.push([i, j]);
       }
     }
   }
 
-  // const dispatch = useDispatch();
+  const dispatch = useDispatch();
 
-  // setTimeout(() => {
-  //     if (computerClickOnce) {
-  //       computerClickOnce = false;
-  //       return;
-  //     }
-  //     let pos = availablePos[Math.floor(Math.random() * availablePos.length)];
-  //     dispatch({
-  //       type: "ComputerClickSquare",
-  //       x: pos[0],
-  //       y: pos[1],
-  //     });
-  //     computerClickOnce = true;
-  //   }, 2000);
-
-  //   setTimeout(() => {
-  //     dispatch({ type: "ComputerChangeTurn" });
-  //   }, 4000);
+  if (turnState === 1) {
+    let pos = availablePos[Math.floor(Math.random() * availablePos.length)];
+    dispatch({
+      type: "ComputerClickSquare",
+      x: pos[0],
+      y: pos[1],
+    });
+    dispatch({ type: "ComputerChangeTurn" });
+  }
 
   return (
     <div>
-      {/* <div>
-                Computer's Score: {AIScore}
-            </div> */}
       <div id="board">{boardComponent}</div>
     </div>
   );

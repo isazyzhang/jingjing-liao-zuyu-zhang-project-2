@@ -3,16 +3,16 @@ import { randomlyChooseFiveShipsForPlayer } from "./PlayerReducerUtils";
 
 export default function playerGameReducer(state, action) {
   const initialBoard = [
-    ["", "", "", "", "", "", "", "", "", ""],
-    ["", "", "", "", "", "", "", "", "", ""],
-    ["", "", "", "", "", "", "", "", "", ""],
-    ["", "", "", "", "", "", "", "", "", ""],
-    ["", "", "", "", "", "", "", "", "", ""],
-    ["", "", "", "", "", "", "", "", "", ""],
-    ["", "", "", "", "", "", "", "", "", ""],
-    ["", "", "", "", "", "", "", "", "", ""],
-    ["", "", "", "", "", "", "", "", "", ""],
-    ["", "", "", "", "", "", "", "", "", ""],
+    ["n", "n", "n", "n", "n", "n", "n", "n", "n", "n"],
+    ["n", "n", "n", "n", "n", "n", "n", "n", "n", "n"],
+    ["n", "n", "n", "n", "n", "n", "n", "n", "n", "n"],
+    ["n", "n", "n", "n", "n", "n", "n", "n", "n", "n"],
+    ["n", "n", "n", "n", "n", "n", "n", "n", "n", "n"],
+    ["n", "n", "n", "n", "n", "n", "n", "n", "n", "n"],
+    ["n", "n", "n", "n", "n", "n", "n", "n", "n", "n"],
+    ["n", "n", "n", "n", "n", "n", "n", "n", "n", "n"],
+    ["n", "n", "n", "n", "n", "n", "n", "n", "n", "n"],
+    ["n", "n", "n", "n", "n", "n", "n", "n", "n", "n"]
   ];
 
   const initialState = {
@@ -33,13 +33,9 @@ export default function playerGameReducer(state, action) {
         copy[action.x][action.y] = "X";
         state.board = copy;
         state.count++;
-        // state.AIScore++;
-        // if (state.AIScore === 17) {
-        //     alert("The computer won!");
-        // }
-      } else if (value === "") {
+      } else if (value === "n") {
         const copy = cloneDeep(state.board);
-        copy[action.x][action.y] = "a";
+        copy[action.x][action.y] = "✓";
         state.board = copy;
       }
       return { ...state };

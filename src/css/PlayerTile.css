@@ -10,7 +10,25 @@
   font-size: 20px;
 }
 
+#✓ {
+  background-color: lightgreen;
+  color: green;
+  font-size: 40px;
+  text-align: center;
+  font-style: bolder;
+}
+
+
 #X {
   background-color: lightcoral;
   color: red;
 }
+
+#n, #s {
+  color: transparent;
+}
+
+#n:hover {
+  background-color: turquoise;
+}
+

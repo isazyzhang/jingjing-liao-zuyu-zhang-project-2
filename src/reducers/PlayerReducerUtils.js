@@ -67,7 +67,7 @@ function validPositionInBoard(board) {
   let validPos = [];
   for (let i = 0; i < board.length; i++) {
     for (let j = 0; j < board[i].length; j++) {
-      if (board[i][j] === "") {
+      if (board[i][j] === "n") {
         validPos.push([i, j]);
       }
     }
@@ -106,6 +106,16 @@ function getShipOnBoard(board, rowPos, colPos, dir, shipLength) {
     }
     return true;
   }
+  if (dir === "down") {
+    for (let i = 0; i < shipLength; i++) {
+      if (validPosition(board, rowPos, colPos)) {
+        rowPos += 1;
+      } else {
+        return false;
+      }
+    }
+    return true;
+  }
 }
 
 function validPosition(board, rowPos, colPos) {
@@ -115,7 +125,7 @@ function validPosition(board, rowPos, colPos) {
   if (colPos < 0 || rowPos >= board.length) {
     return false;
   }
-  if (board[rowPos][colPos] !== "") {
+  if (board[rowPos][colPos] !== "n") {
     return false;
   }
   return true;

@@ -14,11 +14,11 @@ export default function OpponentTile(props) {
                     y:props.y
                 }
             );
-            // setTimeout(() => {
-            //     dispatch({
-            //         type: "HumanChangeTurn",
-            //     });
-            // }, 2000);
+            setTimeout(() => {
+                dispatch({
+                    type: "HumanChangeTurn",
+                });
+            }, 2000);
         }}class="opponentTile" id={condition}>
             {condition}
         </div>
