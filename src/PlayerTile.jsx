@@ -1,6 +1,6 @@
 import "./css/PlayerTile.css";
 import React from "react";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 
 export default function PlayerTile(props) {
   const condition = props.condition; // n or s or a
@@ -25,9 +25,4 @@ export default function PlayerTile(props) {
       {condition}
     </div>
   );
-  // return (
-  //     <div id="playerTile" class={condition}>
-  //         {condition}
-  //     </div>
-  // )
 }

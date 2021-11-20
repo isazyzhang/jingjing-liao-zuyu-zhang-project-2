@@ -27,7 +27,7 @@ export default function NormalGame() {
       {/* <div class="count">
                 Score: {turn === 0 ? humanClickCount : computerClickCount}
             </div> */}
-      <div class="count">{turn === 0 ? "Human's Turn" : "Computer's Turn"}</div>
+      {/* <div class="count">{turn === 0 ? "Human's Turn" : "Computer's Turn"}</div> */}
       <div class="winner">{winner} </div>
       <div id="boards">
         <div id="opponent">
