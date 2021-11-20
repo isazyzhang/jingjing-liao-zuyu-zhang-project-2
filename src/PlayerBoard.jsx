@@ -26,7 +26,7 @@ export default function PlayerBoard() {
   let availablePos = [];
   for (let i = 0; i < playerBoardState.length; i++) {
     for (let j = 0; j < playerBoardState[i].length; j++) {
-      if (playerBoardState[i][j] === "n" || playerBoardState[i][j] === "s") {
+      if (playerBoardState[i][j] === "" || playerBoardState[i][j] === "s") {
         availablePos.push([i, j]);
       }
     }

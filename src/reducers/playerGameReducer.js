@@ -37,9 +37,9 @@ export default function playerGameReducer(state, action) {
         // if (state.AIScore === 17) {
         //     alert("The computer won!");
         // }
-      } else if (value === "n") {
+      } else if (value === "") {
         const copy = cloneDeep(state.board);
-        copy[action.x][action.y] = "a";
+        copy[action.x][action.y] = "✓";
         state.board = copy;
       }
       // } else if (value === "X" || value === "a") {
